@@ -1,0 +1,52 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "team": "Arsenal",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Arsenal_6b211e7e-8c6d-45b3-a149-b21fe184f914_compact.png?v=1499085993"
+    },
+    {
+      "id": 2,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    },
+    {
+      "id": 3,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    },
+    {
+      "id": 4,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    },
+    {
+      "id": 5,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    },
+    {
+      "id": 6,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    },
+    {
+      "id": 7,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    },
+    {
+      "id": 8,
+      "team": "Bournemouth",
+      "crest":
+        "https://cdn.shopify.com/s/files/1/1888/7339/articles/H_AFCB_57802f95-227c-4e01-81f8-0d66fc97c499_compact.png?v=1499086736  "
+    }
+  ]
+}

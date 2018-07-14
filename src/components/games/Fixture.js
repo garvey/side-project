@@ -5,7 +5,7 @@ import { Container, Row, Col, Label, Button } from 'reactstrap';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-const options = ['Home Win', 'Draw', 'Away Win'];
+const options = ['Home win', 'Draw', 'Away Win'];
 
 const defaultOption = options[0];
 
@@ -25,6 +25,8 @@ export default class Fixture extends Component {
     }));
   }
 
+  componentDidMount() {}
+
   render() {
     return (
       <Row>
@@ -40,7 +42,7 @@ export default class Fixture extends Component {
             options={options}
             onChange={this._onSelect}
             value={defaultOption}
-            placeholder="Select an option"
+            placeholder="Select an result"
           />
         </Col>
       </Row>

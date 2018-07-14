@@ -7,18 +7,14 @@ export default class HeadToHead extends Component {
   render() {
     return (
       <Row className="head-to-head mt-4 mb-4">
-        <Col xs={12} className="text-center">
+        <Col>
           <h1>MacDara Cup</h1>
+          <h4>SemiFinal</h4>
+          <h3>8 players marching on</h3>
           <Link to="/competition">view table</Link>
         </Col>
-        <Col className="text-center">
-          <div className="avatar" />
-          Player 1
-        </Col>
-        <Col className="text-center">
-          <h4>SemiFinal</h4>
-        </Col>
-        <Col className="text-center">
+
+        <Col className="text-left">
           <div className="avatar" />
           Player 2
         </Col>

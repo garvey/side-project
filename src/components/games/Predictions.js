@@ -51,7 +51,7 @@ export default class Predictions extends Component {
             away="Crystal Palace"
             awayCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Crystal_Palace_013540fa-7737-46df-bac5-4c50fa9d2572_compact.png?v=1499088060"
           />
-          <h3>Sunday 11th of March</h3>
+          <h3 className="pt-4">Sunday 11th of March</h3>
           <Fixture
             home="Arsenal"
             homeCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Arsenal_6b211e7e-8c6d-45b3-a149-b21fe184f914_compact.png?v=1499085993"
@@ -64,14 +64,14 @@ export default class Predictions extends Component {
             away="Tottenham Hotspur"
             awayCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Tottenham_Hotspur_2_460b0388-b6dd-45b5-9fdb-9214fa1e3e0d_compact.png?v=1499173373"
           />
-          <h3>Monday 12th of March</h3>
+          <h3 className="pt-4">Monday 12th of March</h3>
           <Fixture
             home="Stoke City"
             homeCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Stoke_City_compact.png?v=1499088700"
             away="Manchester City"
             awayCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Manchester_City_compact.png?v=1499088360"
           />
-          <h3>TieBreaker</h3>
+          <h3 className="pt-4">TieBreaker</h3>
           <Row>
             <Col>Number of goals scored this week? </Col>
             <Col>

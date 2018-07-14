@@ -22,7 +22,7 @@ export default class SideBar extends Component {
             </ul>
           </nav>
 
-          <h4>My Competitions</h4>
+          <h5>My Competitions</h5>
           <nav>
             <ul>
               <li>MacDara</li>
@@ -31,7 +31,7 @@ export default class SideBar extends Component {
           </nav>
 
           <div className="align-baseline">
-            <h4>My Account</h4>
+            <h5>My Account</h5>
             <nav>
               <ul>
                 <li>Profile</li>

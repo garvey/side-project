@@ -7,15 +7,14 @@ import Main from '../components/Main';
 class DefaultLayout extends React.Component {
   render() {
     return (
-      <Container>
-        <Row className="header">
-          <Header />
-        </Row>
+      <Container-fluid>
+        <Header className="header" />
+
         <Row className="h-100">
           <SideBar />
           <Main />
         </Row>
-      </Container>
+      </Container-fluid>
     );
   }
 }

@@ -11,7 +11,8 @@ import {
   FormText
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import fire from '../config/Fire';
+import fire, { googleProvider } from '../config/Fire';
+import FaGoogle from 'react-icons/lib/fa/google';
 
 export default class Login extends Component {
   constructor(props) {
@@ -19,10 +20,12 @@ export default class Login extends Component {
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
+    this.googlesignin = this.googlesignin.bind(this);
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      user: null
     };
   }
 
@@ -44,6 +47,19 @@ export default class Login extends Component {
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .catch(error => {
         console.log(error);
+      });
+  }
+
+  googlesignin(e) {
+    e.preventDefault();
+    fire
+      .auth()
+      .signInWithPopup(googleProvider)
+      .then(result => {
+        const user = result.user;
+        this.setState({
+          user
+        });
       });
   }
 
@@ -95,6 +111,17 @@ export default class Login extends Component {
               <Button onClick={this.signup} className="btn btn-success">
                 signup
               </Button>
+              <Row className="pt-2">
+                <Col>
+                  <Button
+                    onClick={this.googlesignin}
+                    className="btn btn-success"
+                  >
+                    Sign in with google <FaGoogle />
+                  </Button>
+                </Col>
+              </Row>
+
               <FormText color="muted">
                 Simple login to test login and signup.
               </FormText>

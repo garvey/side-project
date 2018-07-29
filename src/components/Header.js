@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { Container, Row, Col, Label, Button } from 'reactstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Label,
+  Button,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap';
 import { Switch, Route, Link } from 'react-router-dom';
 
 import fire from '../config/Fire';
@@ -9,6 +22,16 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
+
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
   }
   logout() {
     fire.auth().signOut();
@@ -16,16 +39,26 @@ export default class Header extends Component {
 
   render() {
     return (
-      <Row className="header">
-        <Col xs={6}>
-          <h3 className="p-2">CupMarch</h3>
-        </Col>
-        <Col xs={6} className="text-right">
-          <a className="p-2" onClick={this.logout}>
-            Log out >
-          </a>
-        </Col>
-      </Row>
+      <div>
+        <Navbar className="header" color="faded" expand="md" fixed light>
+          <NavbarBrand href="/" className="mr-auto">
+            CupMarch
+          </NavbarBrand>
+          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+          <Collapse isOpen={!this.state.collapsed} navbar>
+            <Nav navbar>
+              <NavItem>
+                <NavLink href="/profile">Profile</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/" onClick={this.logout}>
+                  Logout
+                </NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
     );
   }
 }

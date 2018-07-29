@@ -31,7 +31,11 @@ class App extends Component {
   }
 
   render() {
-    return <div>{this.state.user ? <DefaultLayout /> : <Login />}</div>;
+    return (
+      <div className="h-100">
+        {this.state.user ? <DefaultLayout /> : <Login />}
+      </div>
+    );
   }
 }
 

@@ -56,7 +56,8 @@ export default class Login extends Component {
       .auth()
       .signInWithPopup(googleProvider)
       .then(result => {
-        const user = result.user;
+        console.log('user data: ', result);
+        const user = result.user.displayName;
         this.setState({
           user
         });
@@ -108,23 +109,17 @@ export default class Login extends Component {
                 Login
               </Button>
               <span> or </span>
-              <Button onClick={this.signup} className="btn btn-success">
-                signup
+              <Button onClick={this.googlesignin} className="btn btn-success">
+                Login with google <FaGoogle />
               </Button>
-              <Row className="pt-2">
+              <Row className="pt-4">
                 <Col>
-                  <Button
-                    onClick={this.googlesignin}
-                    className="btn btn-success"
-                  >
-                    Sign in with google <FaGoogle />
+                  <FormText color="muted">Don't have an account?</FormText>
+                  <Button onClick={this.signup} className="btn btn-success">
+                    signup
                   </Button>
                 </Col>
               </Row>
-
-              <FormText color="muted">
-                Simple login to test login and signup.
-              </FormText>
             </Form>
           </Col>
         </Row>

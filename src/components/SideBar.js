@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default class SideBar extends Component {
   render() {
     return (
-      <Col xs={2} className="sidebar">
+      <Col xs={2} className="sidebar mt-auto">
         <div className="h-100">
           <nav>
             <ul>

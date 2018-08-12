@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import fire from './config/Fire';
-import SideBar from './components/SideBar';
-import Main from './components/Main';
-import Header from './components/Header';
-import { Container, Row, Col, Label, Button } from 'reactstrap';
 import Login from './components/Login';
 import DefaultLayout from './layouts/DefaultLayout';
 

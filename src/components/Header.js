@@ -40,7 +40,7 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar className="header" color="faded" expand="md" fixed light>
+        <Navbar className="header fixed-top" color="faded" expand="md" light>
           <NavbarBrand href="/" className="mr-auto">
             CupMarch
           </NavbarBrand>

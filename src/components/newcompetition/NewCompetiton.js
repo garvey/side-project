@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Container, Row, Col, Label, Button } from 'reactstrap';
-import HeadToHead from './games/HeadToHead';
-import Predictions from './games/Predictions';
 
-export default class Profile extends Component {
+export default class NewCompetition extends Component {
   render() {
     return (
       <div>
-        <Predictions />
+        <h1>New Competiton</h1>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
 import Main from '../components/Main';
@@ -11,8 +11,12 @@ class DefaultLayout extends React.Component {
         <Header className="header" />
 
         <Row className="h-100">
-          <SideBar />
-          <Main />
+          <Col xs={2}>
+            <SideBar />
+          </Col>
+          <Col className="main-content">
+            <Main />
+          </Col>
         </Row>
       </Container-fluid>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Container, Row, Col, Label, Button } from 'reactstrap';
+import Gameweek from './competition/Gameweek';
 
 export default class Competition extends Component {
   state = {
@@ -29,67 +30,105 @@ export default class Competition extends Component {
           </div>
         ))}
 
+        {/* SIDE 1 */}
         <Row>
-          <Col className="text-center">
-            <Row>
-              <Col xs={5} className="align-right">
-                <div className="avatar small" />
-                Rocky
-              </Col>
-              <Col xs={2}>v</Col>
-              <Col xs={5}>
-                <div className="avatar small" />
-                Clubber
-              </Col>
-            </Row>
+          <Col>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
           </Col>
-          <Col className="text-center">
-            <Row>
-              <Col xs={5} className="align-right">
-                <div className="avatar small" />
-                Apollo
-              </Col>
-              <Col xs={2}>v</Col>
-              <Col xs={5}>
-                <div className="avatar small" />
-                Thunderlips
-              </Col>
-            </Row>
+          <Col>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
           </Col>
-          <Col className="text-center">
-            <Row>
-              <Col xs={5} className="align-right">
-                <div className="avatar small" />
-                Tommy
-              </Col>
-              <Col xs={2}>v</Col>
-              <Col xs={5}>
-                <div className="avatar small" />
-                Ivan
-              </Col>
-            </Row>
-          </Col>
-          <Col className="text-center">
-            <Row>
-              <Col>
-                <div className="avatar small" />
-                Mason
-              </Col>
-              <Col>v</Col>
-              <Col>
-                <div className="avatar small" />
-                Micky
-              </Col>
-            </Row>
+          <Col>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
           </Col>
         </Row>
+
         <Row>
-          <Col className="text-center">SEMI FINAL</Col>
-          <Col className="text-center">SEMI FINAL</Col>
+          <Col xs={12} md={4}>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
+
+          <Col xs={12} md={4} className="pt-5">
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
         </Row>
+        {/* END OF SIDE 1 */}
+
+        {/* SIDE 2 */}
         <Row>
-          <Col className="text-center">FINAL</Col>
+          <Col xs={12} md={4}>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
+
+          <Col xs={12} md={4} className="pt-5">
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
+
+          <Col xs={12} md={4}>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
         </Row>
+
+        <Row>
+          <Col xs={12} md={4}>
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
+
+          <Col xs={12} md={4} className="pt-5">
+            <Gameweek
+              opponent1="Rocky"
+              opponent2="Clubber"
+              score1="3"
+              score2="1"
+            />
+          </Col>
+        </Row>
+        {/* END OF SIDE 2 */}
       </div>
     );
   }

@@ -8,24 +8,12 @@ import {
   Button,
   Container,
   Row,
-  FormText,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  Footer
+  FormText
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
 import fire, { googleProvider } from '../config/Fire';
 import FaGoogle from 'react-icons/lib/fa/google';
-import Fans from '../images/fans.svg';
+import Welcome from './website/Welcome';
+import HowItWorks from './website/HowItWorks';
 
 export default class Login extends Component {
   constructor(props) {
@@ -34,22 +22,12 @@ export default class Login extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.signup = this.signup.bind(this);
     this.googlesignin = this.googlesignin.bind(this);
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
 
     this.state = {
       email: '',
       password: '',
       user: null
     };
-  }
-
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
   }
 
   login(e) {
@@ -95,71 +73,11 @@ export default class Login extends Component {
     return (
       <div>
         <Container fluid>
-          <Navbar className="fixed-top" light expand="md">
-            <NavbarBrand href="/">Cup March</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink href="#how-it-works">How it works</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">Find a competiton</NavLink>
-                </NavItem>
-              </Nav>
-            </Collapse>
-          </Navbar>
-          <Row className="welcome">
-            <Col xs={{ size: 8, offset: 2 }}>
-              <h1 className="text-center">
-                Challenge your friends football knowledge by going head to head
-              </h1>
-            </Col>
-            <Col md={{ size: 5, offset: 1 }} className="m-auto">
-              <p>
-                Play head to head in a straight knockout competition. The player
-                with the most goals advances to the next round. Score goals by
-                correctly guessing the result of football games.
-              </p>
-              <span className="float-left">
-                <Button color="primary">Sign Up</Button>
-              </span>
-              <span className="float-right">
-                <Button color="primary">Create Competiton</Button>
-              </span>
-            </Col>
-            <Col md={5}>
-              <img alt="goalkeeper" src={Fans} />
-            </Col>
-          </Row>
+          <Welcome />
+
+          <HowItWorks />
         </Container>
-        <Container className="footer" fluid>
-          <Container>
-            <Row>
-              <Col>2018 &copy; Cup March</Col>
-              <Col>
-                <h4>About</h4>
-                <Nav vertical>
-                  <NavItem>
-                    <NavLink href="#">Link</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="#">Link</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href="#">Another Link</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink disabled href="#">
-                      Disabled Link
-                    </NavLink>
-                  </NavItem>
-                </Nav>
-              </Col>
-              <Col />
-            </Row>
-          </Container>
-        </Container>
+
         <Container>
           <Row>
             <Col

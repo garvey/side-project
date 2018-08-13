@@ -95,52 +95,70 @@ export default class Login extends Component {
     return (
       <div>
         <Container fluid>
-          <Navbar light expand="md">
+          <Navbar className="fixed-top" light expand="md">
             <NavbarBrand href="/">Cup March</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
+                  <NavLink href="#how-it-works">How it works</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">
-                    GitHub
-                  </NavLink>
+                  <NavLink href="#">Find a competiton</NavLink>
                 </NavItem>
-                <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav caret>
-                    Options
-                  </DropdownToggle>
-                  <DropdownMenu right>
-                    <DropdownItem>Option 1</DropdownItem>
-                    <DropdownItem>Option 2</DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>Reset</DropdownItem>
-                  </DropdownMenu>
-                </UncontrolledDropdown>
               </Nav>
             </Collapse>
           </Navbar>
           <Row className="welcome">
-            <Col xs={12}>
+            <Col xs={{ size: 8, offset: 2 }}>
               <h1 className="text-center">
-                Show your Football knowledge by predicting the correct outcome
+                Challenge your friends football knowledge by going head to head
               </h1>
             </Col>
-            <Col md={{ size: 5, offset: 1 }}>
-              this is a brief overview <Button color="primary">Sign Up</Button>
+            <Col md={{ size: 5, offset: 1 }} className="m-auto">
+              <p>
+                Play head to head in a straight knockout competition. The player
+                with the most goals advances to the next round. Score goals by
+                correctly guessing the result of football games.
+              </p>
+              <span className="float-left">
+                <Button color="primary">Sign Up</Button>
+              </span>
+              <span className="float-right">
+                <Button color="primary">Create Competiton</Button>
+              </span>
             </Col>
             <Col md={5}>
               <img alt="goalkeeper" src={Fans} />
             </Col>
           </Row>
         </Container>
-        <Container Footer>
-          <Row>
-            <Col>Cup March</Col>
-            <Col>About</Col>
-          </Row>
+        <Container className="footer" fluid>
+          <Container>
+            <Row>
+              <Col>2018 &copy; Cup March</Col>
+              <Col>
+                <h4>About</h4>
+                <Nav vertical>
+                  <NavItem>
+                    <NavLink href="#">Link</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="#">Link</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="#">Another Link</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink disabled href="#">
+                      Disabled Link
+                    </NavLink>
+                  </NavItem>
+                </Nav>
+              </Col>
+              <Col />
+            </Row>
+          </Container>
         </Container>
         <Container>
           <Row>

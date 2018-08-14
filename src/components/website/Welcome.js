@@ -8,14 +8,14 @@ export default class Welcome extends Component {
       <Row className="welcome h-100">
         <Col xs={{ size: 8, offset: 2 }}>
           <h1 className="text-center">
-            Knockout head to head football prediction
+            Knockout head to head football prediction game
           </h1>
         </Col>
         <Col md={{ size: 5, offset: 1 }} className="mt-auto mb-auto">
           <p>
-            Play head to head in a straight knockout competition. The player
-            with the most goals advances to the next round. Score goals by
-            correctly guessing the result of football games.
+            Play head to head in a straight knockout competition. Score goals by
+            correctly guessing the result of football games. The player with the
+            most goals advances to the next round.
           </p>
 
           <Button color="primary">Create a CupMarch Competiton</Button>

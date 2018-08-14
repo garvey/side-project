@@ -3,6 +3,7 @@ import Welcome from './Welcome';
 import NavBar from './NavBar';
 import HowItWorks from './HowItWorks';
 import Footer from './Footer';
+import FAQ from './FAQ';
 
 export default class Website extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class Website extends Component {
         <NavBar />
         <Welcome />
         <HowItWorks />
+        <FAQ />
         <Footer />
       </div>
     );

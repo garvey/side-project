@@ -36,6 +36,9 @@ export default class NavBar extends Component {
                 <NavLink href="#how-it-works">How it works</NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href="#FAQ">FAQ</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="#">Find a competiton</NavLink>
               </NavItem>
               <NavItem>

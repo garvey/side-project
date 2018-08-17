@@ -5,29 +5,9 @@ export default class Footer extends Component {
   render() {
     return (
       <Container className="footer" fluid>
-        <Container>
+        <Container className="pt-4 pb-4">
           <Row>
-            <Col>2018 &copy; CupMarch</Col>
-            <Col>
-              <h4>About</h4>
-              <Nav vertical>
-                <NavItem>
-                  <NavLink href="#">Link</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">Link</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="#">Another Link</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink disabled href="#">
-                    Disabled Link
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </Col>
-            <Col />
+            <Col className="text-right"> Copyright &copy; 2018 CupMarch</Col>
           </Row>
         </Container>
       </Container>

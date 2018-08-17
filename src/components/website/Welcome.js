@@ -6,7 +6,7 @@ export default class Welcome extends Component {
   render() {
     return (
       <Row className="welcome h-100">
-        <Col xs={{ size: 8, offset: 2 }}>
+        <Col xs={12} md={{ size: 8, offset: 2 }}>
           <h1 className="text-center">
             Knockout head to head football prediction game
           </h1>
@@ -20,7 +20,7 @@ export default class Welcome extends Component {
 
           <Button color="primary">Create a CupMarch Competiton</Button>
         </Col>
-        <Col md={5}>
+        <Col md={5} className="d-none d-sm-block">
           <img alt="goalkeeper" src={Fans} />
         </Col>
       </Row>

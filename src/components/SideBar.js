@@ -9,7 +9,7 @@ export default class SideBar extends Component {
         <div className="sidebar-content">
           <Nav vertical>
             <NavItem>
-              <Link to="/">Homepage</Link>
+              <Link to="/overview">Overview</Link>
             </NavItem>
             <NavItem>
               <Link to="/games">Games</Link>

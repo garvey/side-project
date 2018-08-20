@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Button, CardTitle, CardText } from 'reactstrap';
+import { Row, Col, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import Fans from '../../images/fans.svg';
+import Login from '../Login';
 
 export default class Welcome extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
   render() {
     return (
       <Row className="welcome h-100">
@@ -18,7 +33,22 @@ export default class Welcome extends Component {
             most goals advances to the next round.
           </p>
 
-          <Button color="primary">Create a CupMarch Competiton</Button>
+          <Button color="primary" onClick={this.toggleModal}>
+            Create a CupMarch Competiton
+          </Button>
+
+          <Modal
+            isOpen={this.state.modal}
+            toggle={this.toggleModal}
+            className={this.props.className}
+          >
+            <ModalHeader toggle={this.toggleModal}>
+              Login to CupMarch
+            </ModalHeader>
+            <ModalBody>
+              <Login />
+            </ModalBody>
+          </Modal>
         </Col>
         <Col md={5} className="d-none d-sm-block">
           <img alt="goalkeeper" src={Fans} />

@@ -41,12 +41,12 @@ export default class NavBar extends Component {
               </NavItem>
               {/*<NavItem>
                 <NavLink href="#">Find a competiton</NavLink>
-              </NavItem>*/}
+              </NavItem>
               <NavItem>
                 <NavLink>
                   <Link to="/Login">Login</Link>
                 </NavLink>
-              </NavItem>
+              </NavItem>*/}
             </Nav>
           </Collapse>
         </Container>

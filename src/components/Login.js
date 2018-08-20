@@ -69,60 +69,45 @@ export default class Login extends Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col
-            className="login p-5 mt-5"
-            md={{ size: 8, offset: 2 }}
-            lg={{ size: 6, offset: 3 }}
-          >
-            <h1 className="text-center pb-4">Cup March</h1>
-            <Form>
-              <FormGroup>
-                <Label for="Email">Email</Label>
-                <Input
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  type="email"
-                  name="email"
-                  id="Email"
-                  placeholder="Enter your email"
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="Password">Password</Label>
-                <Input
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                  type="password"
-                  name="password"
-                  id="Password"
-                  placeholder="password"
-                />
-              </FormGroup>
-              <Button
-                type="submit"
-                onClick={this.login}
-                className="btn btn-primary"
-              >
-                Login
-              </Button>
-              <span> or </span>
-              <Button onClick={this.googlesignin} className="btn btn-success">
-                Login with google <FaGoogle />
-              </Button>
-              <Row className="pt-4">
-                <Col>
-                  <FormText color="muted">Don't have an account?</FormText>
-                  <Button onClick={this.signup} className="btn btn-success">
-                    signup
-                  </Button>
-                </Col>
-              </Row>
-            </Form>
+      <Form>
+        <FormGroup>
+          <Label for="Email">Email</Label>
+          <Input
+            value={this.state.email}
+            onChange={this.handleChange}
+            type="email"
+            name="email"
+            id="Email"
+            placeholder="Enter your email"
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="Password">Password</Label>
+          <Input
+            value={this.state.password}
+            onChange={this.handleChange}
+            type="password"
+            name="password"
+            id="Password"
+            placeholder="password"
+          />
+        </FormGroup>
+        <Button type="submit" onClick={this.login} className="btn btn-primary">
+          Login
+        </Button>
+        <span> or </span>
+        <Button onClick={this.googlesignin} className="btn btn-success">
+          Login with google <FaGoogle />
+        </Button>
+        <Row className="pt-4">
+          <Col>
+            <FormText color="muted">Don't have an account?</FormText>
+            <Button onClick={this.signup} className="btn btn-success">
+              signup
+            </Button>
           </Col>
         </Row>
-      </Container>
+      </Form>
     );
   }
 }

@@ -41,8 +41,8 @@ export default class Header extends Component {
     return (
       <div>
         <Navbar className="header fixed-top" color="faded" expand="md" light>
-          <NavbarBrand href="/" className="mr-auto">
-            CupMarch
+          <NavbarBrand className="mr-auto">
+            <Link to="/overview">CupMarch</Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>

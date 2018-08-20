@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Row, Col, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Upcoming from './homepage/Upcoming';
 import { Link } from 'react-router-dom';
 
-export default class Login extends Component {
+export default class Overview extends Component {
   render() {
     return (
       <div>

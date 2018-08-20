@@ -115,6 +115,10 @@ body {
   padding-top: 80px;
 }
 
+.login-background {
+  background: #fff;
+}
+
 .login {
   background: #fff;
   border: 1px solid #ddd;
@@ -138,7 +142,6 @@ body {
   max-height: 200px;
   margin: 0 auto;
   display: block;
-  padding: 20px;
 }
 
 .how-it-works .friends {

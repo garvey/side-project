@@ -34,7 +34,7 @@ export default class Welcome extends Component {
           </p>
 
           <Button color="primary" onClick={this.toggleModal}>
-            Create a CupMarch Competiton
+            Login to create a CupMarch Tournament
           </Button>
 
           <Modal

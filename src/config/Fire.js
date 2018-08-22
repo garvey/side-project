@@ -11,3 +11,6 @@ const config = {
 const fire = firebase.initializeApp(config);
 export default fire;
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+export const tournaments = firebase.database().ref('/tournaments');
+export const teams = firebase.database().ref('/teams');

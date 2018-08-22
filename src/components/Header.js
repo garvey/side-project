@@ -46,7 +46,7 @@ export default class Header extends Component {
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar>
+            <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/profile">Profile</NavLink>
               </NavItem>

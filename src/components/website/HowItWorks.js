@@ -41,8 +41,8 @@ export default class HowItWorks extends Component {
             <img className="img-fluid" src={Glory} alt="celebration" />
           </Col>
           <Col sm={6} className="text-center mt-auto mb-auto">
-            <h3>Glory</h3>
-            <p>There can only be one winner</p>
+            <h3>Celebrate</h3>
+            <p>The last player standing wins!</p>
           </Col>
         </Row>
       </Container>

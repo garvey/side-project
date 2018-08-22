@@ -17,6 +17,9 @@ export default class SideBar extends Component {
             <NavItem>
               <Link to="/competition">competition</Link>
             </NavItem>
+            <NavItem>
+              <Link to="/CreateTournament">Create Tournament</Link>
+            </NavItem>
           </Nav>
 
           <div className="heading">My Competitions</div>

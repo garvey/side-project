@@ -163,4 +163,14 @@ body {
   background: #e5e4d2;
   padding: 40px;
 }
+
+.premier-league {
+  background: #39164f;
+  color: #fff;
+}
+
+.la-liga {
+  background: #0c356e;
+  color: #fff;
+}
 /*# sourceMappingURL=App.css.map */

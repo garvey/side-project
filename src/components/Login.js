@@ -97,16 +97,8 @@ export default class Login extends Component {
         </Button>
         <span> or </span>
         <Button onClick={this.googlesignin} className="btn btn-success">
-          Login with google <FaGoogle />
+          <FaGoogle /> Login with google
         </Button>
-        <Row className="pt-4">
-          <Col>
-            <FormText color="muted">Don't have an account?</FormText>
-            <Button onClick={this.signup} className="btn btn-success">
-              signup
-            </Button>
-          </Col>
-        </Row>
       </Form>
     );
   }

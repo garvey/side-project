@@ -7,17 +7,23 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Container
+  Container,
+  Modal,
+  ModalBody,
+  ModalHeader
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import Login from '../Login';
 
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      modal: false
     };
+
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggle() {
@@ -25,32 +31,49 @@ export default class NavBar extends Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  toggleModal() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
   render() {
     return (
-      <Navbar className="fixed-top" light expand="md">
-        <Container>
-          <NavbarBrand href="/">CupMarch</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="#How-it-works">How it works</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#FAQ">FAQ</NavLink>
-              </NavItem>
-              {/*<NavItem>
-                <NavLink href="#">Find a competiton</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>
-                  <Link to="/Login">Login</Link>
-                </NavLink>
-              </NavItem>*/}
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
+      <div>
+        <Navbar className="fixed-top" light expand="md">
+          <Container>
+            <NavbarBrand href="/">CupMarch</NavbarBrand>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink href="#How-it-works">How it works</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink onClick={this.toggleModal} href="#FAQ">
+                    FAQ
+                  </NavLink>
+                </NavItem>
+
+                <NavItem>
+                  <NavLink onClick={this.toggleModal}>Login</NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Container>
+        </Navbar>
+
+        <Modal
+          isOpen={this.state.modal}
+          toggle={this.toggleModal}
+          className={this.props.className}
+        >
+          <ModalHeader toggle={this.toggleModal}>Login to CupMarch</ModalHeader>
+          <ModalBody>
+            <Login />
+          </ModalBody>
+        </Modal>
+      </div>
     );
   }
 }

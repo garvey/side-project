@@ -14,7 +14,7 @@ export default class Predictions extends Component {
               home="Manchester United"
               homeCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Manchester_United_compact.png?v=1499088382"
               away="Liverpool"
-              awayCrest="https://cdn.shopify.com/s/files/1/1888/7339/articles/H_Liverpool_compact.png?v=1499088327"
+              awayCrest="https://firebasestorage.googleapis.com/v0/b/cupmarch-ebeb4.appspot.com/o/crests%2FLiverpool_crest.png?alt=media&token=08f215a6-dca2-46ef-8e6c-4989209b9b7a"
             />
             <Fixture
               home="Everton"

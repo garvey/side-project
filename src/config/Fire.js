@@ -8,8 +8,10 @@ const config = {
   storageBucket: 'cupmarch-ebeb4.appspot.com',
   messagingSenderId: '411840433343'
 };
+
 const fire = firebase.initializeApp(config);
 export default fire;
+
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 export const tournaments = firebase.database().ref('/tournaments');

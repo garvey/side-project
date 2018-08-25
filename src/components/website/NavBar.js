@@ -50,9 +50,7 @@ export default class NavBar extends Component {
                   <NavLink href="#How-it-works">How it works</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink onClick={this.toggleModal} href="#FAQ">
-                    FAQ
-                  </NavLink>
+                  <NavLink href="#FAQ">FAQ</NavLink>
                 </NavItem>
 
                 <NavItem>

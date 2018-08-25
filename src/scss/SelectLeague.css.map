@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,IAAI;CACZ;;AAED,AAAA,QAAQ,CAAC;EACP,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,IAAI;CACZ",
-    "sources": [
-        "SelectLeague.scss"
-    ],
-    "names": [],
-    "file": "SelectLeague.css"
-}

@@ -2,15 +2,32 @@ import React, { Component } from 'react';
 import { Row, Col, NavItem, Nav } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+import firebase from 'firebase';
+
+var name;
+var photo;
+var email;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    console.log('This is the user: ', user);
+    name = user.displayName;
+    photo = user.photoURL;
+    email = user.email;
+
+    console.log(name);
+  } else {
+    // No user is signed in.
+    console.log('There is no logged in user');
+  }
+});
+
 export default class SideBar extends Component {
   render() {
     return (
       <div className="sidebar">
         <div className="sidebar-content">
           <Nav vertical>
-            <NavItem>
-              <Link to="/overview">Overview</Link>
-            </NavItem>
             <NavItem>
               <Link to="/games">Games</Link>
             </NavItem>
@@ -30,24 +47,23 @@ export default class SideBar extends Component {
             </ul>
           </nav>
 
-          <div className="align-baseline">
-            <div className="heading">My Account</div>
-            <nav>
-              <ul>
-                <li>Profile</li>
-                <li>Settings</li>
-                <li>Trophy Cabinet</li>
-                <li>Create Competition</li>
-              </ul>
-            </nav>
-          </div>
-          <Row className="account p-3">
+          <Row className="account p-3 align-baseline">
             <Col xs={3}>
-              <div className="avatar small" />
+              <Link to="/profile">
+                {photo ? (
+                  <img className="avatar small" src={photo} alt="user image" />
+                ) : (
+                  <img
+                    className="avatar small"
+                    src="https://firebasestorage.googleapis.com/v0/b/cupmarch-ebeb4.appspot.com/o/crests%2FLiverpool_crest.png?alt=media&token=08f215a6-dca2-46ef-8e6c-4989209b9b7a"
+                    alt="user image"
+                  />
+                )}
+              </Link>
             </Col>
             <Col xs={9}>
               <small>
-                Rocky Balboa
+                {name ? name : email}
                 <br />
                 W2 L0 GF6 GA2
               </small>

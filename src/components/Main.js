@@ -8,14 +8,19 @@ import CreateTournament from './create_tournament/CreateTournament';
 import SelectLeague from './create_tournament/SelectLeague';
 import PremierLeague from './create_tournament/PremierLeague';
 import LaLiga from './create_tournament/LaLiga';
+import Profile from './Profile';
+import Settings from './Settings';
 
 const Main = () => (
   <Container>
     <main>
       <Switch>
-        <Route default path="/overview" component={Overview} />
+        <Route exact path="/" component={Overview} />
+
         <Route path="/competition" component={Competition} />
         <Route path="/games" component={Games} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/settings" component={Settings} />
 
         {/* Create competition route */}
         <Route path="/createtournament" component={CreateTournament} />

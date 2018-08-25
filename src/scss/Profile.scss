@@ -1,18 +1,8 @@
-.head-to-head {
-}
-
-.avatar {
-  display: block;
+.user-image {
   width: 100px;
   height: 100px;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
   margin: 0 auto;
-  background: #ccc;
-
-  &.small {
-    width: 50px;
-    height: 50px;
-  }
 }

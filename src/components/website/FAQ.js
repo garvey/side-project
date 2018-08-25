@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Row, Col, Card, Container, CardTitle, CardText } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 export default class FAQ extends Component {
   render() {
     return (
-      <Container id="#How-it-works" className="pt-5 pb-5">
-        <Row className="how-it-works">
+      <Container id="FAQ" className="pt-5 pb-5">
+        <Row className="FAQ">
           <Col xs={12} className="pb-3">
             <h1>FAQ</h1>
           </Col>

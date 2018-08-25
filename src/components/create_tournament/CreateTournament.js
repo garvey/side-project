@@ -79,7 +79,7 @@ export default class CreateTournament extends Component {
               <Button>Submit</Button>
             </Form>
 
-            <p>TOURNAMENTS LISTED HERE</p>
+            <p>Tournament LISTED HERE</p>
             {this.renderTournaments()}
           </Col>
         </Row>

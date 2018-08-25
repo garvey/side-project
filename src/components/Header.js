@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
 import {
-  Container,
-  Row,
-  Col,
-  Label,
-  Button,
   Navbar,
   NavbarBrand,
   NavbarToggler,
@@ -14,8 +8,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
-import { Switch, Route, Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 import fire from '../config/Fire';
 
 export default class Header extends Component {
@@ -42,13 +35,13 @@ export default class Header extends Component {
       <div>
         <Navbar className="header fixed-top" color="faded" expand="md" light>
           <NavbarBrand className="mr-auto">
-            <Link to="/overview">CupMarch</Link>
+            <Link to="/">CupMarch</Link>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/profile">Profile</NavLink>
+                <Link to="/settings">Settings</Link>
               </NavItem>
               <NavItem>
                 <NavLink href="/" onClick={this.logout}>

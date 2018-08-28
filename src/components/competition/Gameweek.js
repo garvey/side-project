@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText
-} from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Row, Col, Card, CardBody, CardTitle } from 'reactstrap';
 
 export default class Gameweek extends Component {
   render() {

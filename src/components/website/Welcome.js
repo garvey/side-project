@@ -30,7 +30,7 @@ export default class Welcome extends Component {
           <p>
             Play head to head in a straight knockout competition. Score goals by
             correctly guessing the result of football games. The player with the
-            most goals advances to the next round.
+            most goals at the end of the gameweek advances to the next round.
           </p>
 
           <Button color="primary" onClick={this.toggleModal}>

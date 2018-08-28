@@ -3,8 +3,6 @@ import { Row, Col } from 'reactstrap';
 import Upcoming from './homepage/Upcoming';
 import { Link } from 'react-router-dom';
 
-import _ from 'lodash';
-
 export default class Overview extends Component {
   render() {
     return (

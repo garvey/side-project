@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container, Row, Col, Label, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import FaAngleLeft from 'react-icons/lib/fa/angle-left';
 import { Link } from 'react-router-dom';
 

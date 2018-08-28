@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
-import { Container, Row, Col, Label, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class HeadToHead extends Component {

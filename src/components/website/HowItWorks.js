@@ -52,7 +52,7 @@ export default class HowItWorks extends Component {
           </Col>
 
           <Col sm={6} className="friends">
-            <img className="img-fluid" src={Invite} alt="INvite your friends" />
+            <img className="img-fluid" src={Invite} alt="Invite your friends" />
           </Col>
           <Col sm={6} className="text-center mt-auto mb-auto">
             <h3>Invite your friends</h3>

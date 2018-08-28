@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardText
-} from 'reactstrap';
+import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 export default class Upcoming extends Component {

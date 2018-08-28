@@ -13,6 +13,7 @@ import {
   ModalHeader
 } from 'reactstrap';
 import Login from '../Login';
+import SignIn from '../SignIn';
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -68,7 +69,7 @@ export default class NavBar extends Component {
         >
           <ModalHeader toggle={this.toggleModal}>Login to CupMarch</ModalHeader>
           <ModalBody>
-            <Login />
+            <SignIn />
           </ModalBody>
         </Modal>
       </div>

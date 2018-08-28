@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
-import { Container, Row, Col, Label, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Gameweek from './competition/Gameweek';
 
 export default class Competition extends Component {

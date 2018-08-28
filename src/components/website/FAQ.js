@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'reactstrap';
-import ScrollableAnchor from 'react-scrollable-anchor';
 
 export default class FAQ extends Component {
   render() {
@@ -14,7 +13,7 @@ export default class FAQ extends Component {
 
         <Row className="questions">
           <Col xs={12}>
-            <h4 className="pb-4">Question 1</h4>
+            <h4 className="pb-4">How do I create a tournament?</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -23,7 +22,7 @@ export default class FAQ extends Component {
             </p>
           </Col>
           <Col xs={12} className="pb-4">
-            <h4>Question 2</h4>
+            <h4>How do I join a tournament?</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -32,7 +31,7 @@ export default class FAQ extends Component {
             </p>
           </Col>
           <Col xs={12} className="pb-4">
-            <h4>Question 3</h4>
+            <h4>How do I score goals?</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -41,7 +40,7 @@ export default class FAQ extends Component {
             </p>
           </Col>
           <Col xs={12} className="pb-4">
-            <h4>Question 4</h4>
+            <h4>How do I win?</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import React from 'react';
+import { Row, Col } from 'reactstrap';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
 import Main from '../components/Main';

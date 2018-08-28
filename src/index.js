@@ -9,12 +9,13 @@ import './scss/App.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import reducers from './reducers';
 
-// const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
   //<Provider store={store}>
-  <Provider>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>

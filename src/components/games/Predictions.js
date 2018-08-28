@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
 import { Row, Col, Input, Button } from 'reactstrap';
 import Fixture from './Fixture';
 

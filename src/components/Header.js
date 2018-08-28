@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   Navbar,
-  NavbarBrand,
   NavbarToggler,
   Collapse,
   Nav,
@@ -9,7 +8,7 @@ import {
   NavLink
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import fire from '../config/Fire';
+import firebase from '../config/firebase';
 
 export default class Header extends Component {
   constructor(props) {
@@ -27,21 +26,21 @@ export default class Header extends Component {
     });
   }
   logout() {
-    fire.auth().signOut();
+    firebase.auth().signOut();
   }
 
   render() {
     return (
       <div>
         <Navbar className="header fixed-top" color="faded" expand="md" light>
-          <NavbarBrand className="mr-auto">
-            <Link to="/">CupMarch</Link>
-          </NavbarBrand>
+          <Link to="/app" className="mr-auto">
+            CupMarch
+          </Link>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link to="/settings">Settings</Link>
+                <Link to="/app/settings">Settings</Link>
               </NavItem>
               <NavItem>
                 <NavLink href="/" onClick={this.logout}>

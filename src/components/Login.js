@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
-import { FormGroup, Input, Form, Col, Label, Button, Row } from 'reactstrap';
-import fire, { googleProvider } from '../config/Fire';
+import { connect } from 'react-redux';
+import {
+  FormGroup,
+  Input,
+  Form,
+  Col,
+  Label,
+  Button,
+  Row,
+  Alert
+} from 'reactstrap';
+import firebase, { googleProvider } from '../config/firebase';
 import FaGoogle from 'react-icons/lib/fa/google';
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
@@ -14,34 +24,44 @@ export default class Login extends Component {
     this.state = {
       email: '',
       password: '',
-      user: null
+      user: null,
+      message: ''
     };
   }
 
   login(e) {
     e.preventDefault();
-    fire
+    firebase
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(u => {})
       .catch(error => {
         console.log(error);
+        const message = error.message;
+        this.setState({
+          message
+        });
       });
   }
 
   signup(e) {
     e.preventDefault();
-    fire
+    firebase
       .auth()
       .createUserWithEmailAndPassword(this.state.email, this.state.password)
       .catch(error => {
         console.log(error);
+        console.log(error.message);
+        const message = error.message;
+        this.setState({
+          message
+        });
       });
   }
 
   googlesignin(e) {
     e.preventDefault();
-    fire
+    firebase
       .auth()
       .signInWithPopup(googleProvider)
       .then(result => {
@@ -90,7 +110,7 @@ export default class Login extends Component {
           >
             Login
           </Button>
-
+          <span> or </span>
           <Button
             type="submit"
             onClick={this.signup}
@@ -99,6 +119,14 @@ export default class Login extends Component {
             Sign up
           </Button>
         </Form>
+
+        <Row className="pt-2">
+          <Col>
+            {this.state.message ? (
+              <Alert color="info">{this.state.message} </Alert>
+            ) : null}{' '}
+          </Col>
+        </Row>
 
         <Row>
           <Col className="text-right">
@@ -111,3 +139,11 @@ export default class Login extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    users: state.users
+  };
+}
+
+export default connect(mapStateToProps)(Login);

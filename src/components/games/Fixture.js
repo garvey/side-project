@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
-import { Container, Row, Col, Label, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -31,11 +30,13 @@ export default class Fixture extends Component {
     return (
       <Row>
         <Col className="text-right">
-          {this.props.home} <img src={this.props.homeCrest} />
+          {this.props.home}{' '}
+          <img src={this.props.homeCrest} alt={this.props.home} />
         </Col>
         <Col className="text-center">v</Col>
         <Col className="text-left">
-          <img src={this.props.awayCrest} /> {this.props.away}
+          <img src={this.props.awayCrest} alt={this.props.away} />{' '}
+          {this.props.away}
         </Col>
         <Col>
           <Dropdown

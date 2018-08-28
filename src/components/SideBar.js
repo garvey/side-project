@@ -29,13 +29,13 @@ export default class SideBar extends Component {
         <div className="sidebar-content">
           <Nav vertical>
             <NavItem>
-              <Link to="/games">Games</Link>
+              <Link to="/app/games">Games</Link>
             </NavItem>
             <NavItem>
-              <Link to="/competition">competition</Link>
+              <Link to="/app/competition">competition</Link>
             </NavItem>
             <NavItem>
-              <Link to="/CreateTournament">Create Tournament</Link>
+              <Link to="/app/list">Create Tournament</Link>
             </NavItem>
           </Nav>
 
@@ -49,14 +49,14 @@ export default class SideBar extends Component {
 
           <Row className="account p-3 align-baseline">
             <Col xs={3}>
-              <Link to="/profile">
+              <Link to="/app/profile">
                 {photo ? (
-                  <img className="avatar small" src={photo} alt="user image" />
+                  <img className="avatar small" src={photo} alt="user" />
                 ) : (
                   <img
                     className="avatar small"
                     src="https://firebasestorage.googleapis.com/v0/b/cupmarch-ebeb4.appspot.com/o/crests%2FLiverpool_crest.png?alt=media&token=08f215a6-dca2-46ef-8e6c-4989209b9b7a"
-                    alt="user image"
+                    alt="user"
                   />
                 )}
               </Link>

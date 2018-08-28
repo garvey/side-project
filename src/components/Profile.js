@@ -1,55 +1,35 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Label, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-import firebase from 'firebase';
-
-var name;
-var photo;
-var email;
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    console.log('This is the user: ', user);
-    name = user.displayName;
-    photo = user.photoURL;
-    email = user.email;
-  } else {
-    // No user is signed in.
-    console.log('There is no logged in user');
-  }
-});
-
-function writeUserData(userId, name, email, imageUrl) {
-  firebase
-    .database()
-    .ref('users/' + userId)
-    .set({
-      username: name,
-      email: email,
-      profile_picture: imageUrl
-    });
-
-  console.log('USER ID', userId);
-}
-
-export default class Profile extends Component {
+class Profile extends Component {
   render() {
+    console.log(this.props);
     return (
       <Container>
         <Row>
           <Col md={2}>
-            {photo ? (
-              <img className="user-image" src={photo} alt="user image" />
+            {this.props.auth.photoURL ? (
+              <img
+                className="user-image"
+                src={this.props.auth.photoURL}
+                alt="user"
+              />
             ) : (
               <img
                 className="user-image"
                 src="https://firebasestorage.googleapis.com/v0/b/cupmarch-ebeb4.appspot.com/o/crests%2FLiverpool_crest.png?alt=media&token=08f215a6-dca2-46ef-8e6c-4989209b9b7a"
-                alt="user"
+                alt="default user profile"
               />
             )}
           </Col>
           <Col md={10}>
-            <h3 className="text-left">{name ? name : email}</h3>
+            <h3 className="text-left">
+              {this.props.auth.displayName
+                ? this.props.auth.displayName
+                : this.props.auth.email}
+            </h3>
           </Col>
         </Row>
 
@@ -64,3 +44,14 @@ export default class Profile extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ auth }) => {
+  return {
+    auth
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  actions
+)(Profile);

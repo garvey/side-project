@@ -1,41 +1,34 @@
 import React, { Component } from 'react';
-import fire from './config/Fire';
-import Login from './components/Login';
 import Website from './components/website/Website';
 import DefaultLayout from './layouts/DefaultLayout';
+import requireAuth from './components/auth/requireAuth';
+import { connect } from 'react-redux';
+import { fetchUser } from './actions';
+import { BrowserRouter, Route } from 'react-router-dom';
+import SignIn from './components/SignIn';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: null
-    };
-  }
-
-  componentDidMount() {
-    this.authListener();
-    console.log(this.authListener);
-    console.log('state', this.state);
-  }
-
-  authListener() {
-    fire.auth().onAuthStateChanged(user => {
-      //console.log(user);
-      if (user) {
-        this.setState({ user });
-      } else {
-        this.setState({ user: null });
-      }
-    });
+  componentWillMount() {
+    this.props.fetchUser();
+    console.log(this.props);
   }
 
   render() {
     return (
       <div className="h-100">
-        {this.state.user ? <DefaultLayout /> : <Website />}
+        <BrowserRouter>
+          <div>
+            <Route exact path="/" component={Website} />
+            <Route path="/app" component={requireAuth(DefaultLayout)} />
+          </div>
+        </BrowserRouter>
+        {/* this.state.user ? <DefaultLayout /> : <Website /> */}
       </div>
     );
   }
 }
 
-export default App;
+export default connect(
+  null,
+  { fetchUser }
+)(App);

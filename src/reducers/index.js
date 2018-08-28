@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-import data from './dataReducer';
+import tournaments from './tournamentReducer';
+import auth from './authReducer';
 
 export default combineReducers({
-  data
+  tournaments,
+  auth
 });

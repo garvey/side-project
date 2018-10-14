@@ -10,16 +10,18 @@ import LaLiga from './create_tournament/LaLiga';
 import Profile from './Profile';
 import Settings from './Settings';
 import TournamentList from '../containers/TournamentList';
+import ShowTournament from '../containers/ShowTournament';
 
 const Main = () => (
   <Container>
     <main>
       <Switch>
-        <Route exact path="/app" component={Overview} />
-        <Route path="/app/list" component={TournamentList} />
+        <Route exact path="/dashboard" component={Overview} />
+        <Route path="/dashboard/list" component={TournamentList} />
+        <Route path="/dashboard/view_tournaments" component={ShowTournament} />
 
         <Route path="/app/competition" component={Competition} />
-        <Route path="/app/games" component={Games} />
+        <Route path="/dashboard/games" component={Games} />
         <Route path="/app/profile" component={Profile} />
         <Route path="/app/settings" component={Settings} />
 

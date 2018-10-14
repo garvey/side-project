@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Col } from 'reactstrap';
-import { deleteTournament, deleteTournamentsId } from '../actions';
+import { deleteTournament } from '../actions';
+import { Link } from 'react-router-dom';
 
 class ShowTournament extends Component {
   handleDeleteClick = deleteTournamentsId => {
@@ -12,9 +13,11 @@ class ShowTournament extends Component {
   render() {
     const { tournaments, tournamentsId } = this.props;
     return (
-      <Col key="toDoName" className="pt-4">
+      <Col xs={12}>
         <h4>
-          {tournaments.tournament_name}{' '}
+          <Link to={`/tournaments/${tournaments}`}>
+            {tournaments.tournament_name}
+          </Link>
           <span onClick={() => this.handleDeleteClick(tournamentsId)}>
             <Button className="large material-icons">delete</Button>
           </span>

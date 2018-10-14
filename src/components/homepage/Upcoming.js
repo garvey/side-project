@@ -14,7 +14,9 @@ export default class Upcoming extends Component {
             <Col xs={12} md={10}>
               <CardTitle>{this.props.opponent}</CardTitle>
               <CardSubtitle>
-                <small>{this.props.cup}</small>
+                <small>
+                  {this.props.cup} - {this.props.round}
+                </small>
               </CardSubtitle>
             </Col>
           </Row>

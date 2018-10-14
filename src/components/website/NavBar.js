@@ -12,7 +12,6 @@ import {
   ModalBody,
   ModalHeader
 } from 'reactstrap';
-import Login from '../Login';
 import SignIn from '../SignIn';
 
 export default class NavBar extends Component {

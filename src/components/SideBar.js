@@ -28,24 +28,27 @@ export default class SideBar extends Component {
       <div className="sidebar">
         <div className="sidebar-content">
           <Nav vertical>
-            <NavItem>
+            {/*<NavItem>
               <Link to="/app/games">Games</Link>
             </NavItem>
             <NavItem>
               <Link to="/app/competition">competition</Link>
+            </NavItem>*/}
+            <NavItem>
+              <Link to="/dashboard/list">Create Tournament</Link>
             </NavItem>
             <NavItem>
-              <Link to="/app/list">Create Tournament</Link>
+              <Link to="/app/view_tournaments">View Tournaments</Link>
             </NavItem>
           </Nav>
 
-          <div className="heading">My Competitions</div>
+          {/*<div className="heading">My Competitions</div>
           <nav>
             <ul>
               <li>MacDara</li>
               <li>Charity</li>
             </ul>
-          </nav>
+          </nav>*/}
 
           <Row className="account p-3 align-baseline">
             <Col xs={3}>

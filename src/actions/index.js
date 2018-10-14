@@ -1,6 +1,16 @@
-import { tournamentsRef, authRef, googleProvider } from '../config/firebase';
+import {
+  tournamentsRef,
+  authRef,
+  googleProvider,
+  gameweekRef
+} from '../config/firebase';
 
-import { FETCH_USER, FETCH_TOURNAMENTS } from './types';
+import {
+  FETCH_USER,
+  FETCH_TOURNAMENTS,
+  FETCH_GAMEWEEK,
+  UPDATE_USER
+} from './types';
 
 // TOURNAMENTS
 export const fetchTournaments = uid => async dispatch => {
@@ -26,7 +36,7 @@ export const deleteTournament = (deleteTournament, uid) => async dispatch => {
     .remove();
 };
 
-// USERS
+// users
 export const fetchUser = () => dispatch => {
   authRef.onAuthStateChanged(user => {
     if (user) {
@@ -43,7 +53,23 @@ export const fetchUser = () => dispatch => {
   });
 };
 
-// SIGNIN
+export const UpdateUser = () => dispatch => {
+  authRef.onAuthStateChanged(user => {
+    if (user) {
+      dispatch({
+        type: UPDATE_USER,
+        payload: user
+      });
+    } else {
+      dispatch({
+        type: UPDATE_USER,
+        payload: null
+      });
+    }
+  });
+};
+
+// Sign in
 export const signIn = () => dispatch => {
   authRef
     .signInWithPopup(googleProvider)
@@ -53,6 +79,7 @@ export const signIn = () => dispatch => {
     });
 };
 
+// Sign out
 export const signOut = () => dispatch => {
   authRef
     .signOut()
@@ -62,4 +89,14 @@ export const signOut = () => dispatch => {
     .catch(error => {
       console.log(error);
     });
+};
+
+// Gameweek
+export const fetchGameweek = () => async dispatch => {
+  gameweekRef.on('value', snapshot => {
+    dispatch({
+      type: FETCH_GAMEWEEK,
+      payload: snapshot.val()
+    });
+  });
 };

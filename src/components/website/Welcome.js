@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import Fans from '../../images/fans.svg';
 import Login from '../Login';
+import SignIn from '../SignIn';
 
 export default class Welcome extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ export default class Welcome extends Component {
               Login to CupMarch
             </ModalHeader>
             <ModalBody>
-              <Login />
+              <SignIn />
             </ModalBody>
           </Modal>
         </Col>

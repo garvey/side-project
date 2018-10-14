@@ -33,7 +33,7 @@ export default class Header extends Component {
     return (
       <div>
         <Navbar className="header fixed-top" color="faded" expand="md" light>
-          <Link to="/app" className="mr-auto">
+          <Link to="/dashboard" className="mr-auto">
             CupMarch
           </Link>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />

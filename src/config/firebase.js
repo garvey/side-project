@@ -7,6 +7,7 @@ export default firebase;
 
 const databaseRef = firebase.database().ref();
 export const tournamentsRef = databaseRef.child('tournaments');
+export const gameweekRef = databaseRef.child('gameweek');
 
 // Auth
 export const authRef = firebase.auth();

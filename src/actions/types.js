@@ -1,2 +1,4 @@
 export const FETCH_USER = 'FETCH_USER';
 export const FETCH_TOURNAMENTS = 'FETCH_TOURNAMENTS';
+export const FETCH_GAMEWEEK = 'FETCH_GAMEWEEK';
+export const UPDATE_USER = 'UPDATE_USER';

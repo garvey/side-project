@@ -9,19 +9,13 @@ export default function(ComposedComponent) {
     };
 
     componentWillMount() {
-      if (this.props.authenticated === null) {
-        this.context.router.history.push('/');
-      }
-    }
-
-    componentWillUpdate(nextProps) {
-      if (!nextProps.authenticated) {
+      if (this.props.authenticationState === null) {
         this.context.router.history.push('/');
       }
     }
 
     render() {
-      if (this.props.authenticated) {
+      if (this.props.authenticationState) {
         return <ComposedComponent {...this.props} />;
       }
       return null;

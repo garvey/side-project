@@ -12,8 +12,8 @@ export default class FAQ extends Component {
         </Row>
 
         <Row className="questions">
-          <Col xs={12}>
-            <h4 className="pb-4">How do I create a tournament?</h4>
+          <Col xs={12} className="pb-4">
+            <h4 className="">How do I create a tournament?</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

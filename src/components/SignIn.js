@@ -21,6 +21,7 @@ class Signin extends Component {
     return (
       <Row>
         <Col>
+          <p>Sign in to join and create cupmarch tournaments</p>
           <Button onClick={this.props.signIn}>
             <FaGoogle />
             Sign In With Google
